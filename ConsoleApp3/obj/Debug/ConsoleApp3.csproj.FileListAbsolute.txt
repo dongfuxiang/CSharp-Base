@@ -1,0 +1,12 @@
+D:\Project\ConsoleApp1\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+D:\Project\ConsoleApp1\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+D:\Project\ConsoleApp1\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+D:\Project\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+D:\Project\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+D:\Project\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
+D:\Project\ConsoleApp1\ConsoleApp3\bin\Debug\ConsoleApp2.exe
+D:\Project\ConsoleApp1\ConsoleApp3\bin\Debug\ConsoleApp2.pdb
+D:\Project\ConsoleApp1\ConsoleApp3\bin\Debug\ConsoleApp2.exe.config
+D:\Project\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CopyComplete
+D:\Project\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.AssemblyReference.cache
+D:\Project\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.SuggestedBindingRedirects.cache

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<SysConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SSourceType>PLCBaseCtrl</SSourceType>
+  <DemuraUnitNum>1</DemuraUnitNum>
+  <AlwaysAckPowerOffOK>false</AlwaysAckPowerOffOK>
+  <UseDateTimeID>false</UseDateTimeID>
+  <PowerOnAfterErase>false</PowerOnAfterErase>
+  <ArtNGRePhoto>true</ArtNGRePhoto>
+  <RePhotoGrayExposure>2000</RePhotoGrayExposure>
+  <ThreadTimeAfterParticle>100</ThreadTimeAfterParticle>
+  <IsShieldRGBArtCheck>true</IsShieldRGBArtCheck>
+  <IsSaveMIM>false</IsSaveMIM>
+  <SaveResultDataFolder>D:\ResultData</SaveResultDataFolder>
+  <SaveGammaDataFolder>D:\ResultData</SaveGammaDataFolder>
+  <SaveMIMFilesFolder>D:\RawDataFiles</SaveMIMFilesFolder>
+  <SaveExceptionFolder>D:\ExceptionImage</SaveExceptionFolder>
+  <FileSaveTime>30</FileSaveTime>
+  <PgGammaTxtPath>D:\Withsystem\WAgent\log\rcv\DEMURA_GAMMMA_DATA\</PgGammaTxtPath>
+  <isShieldArtCheck>false</isShieldArtCheck>
+  <isShieldGrayCheck>false</isShieldGrayCheck>
+  <isShieldAAera>false</isShieldAAera>
+  <isShieldAlignment>false</isShieldAlignment>
+  <isShieldDemura>false</isShieldDemura>
+  <IsShiledParticle>false</IsShiledParticle>
+  <isShieldAlg>false</isShieldAlg>
+  <isPreAndBehCheck>true</isPreAndBehCheck>
+  <isOKLianglv>true</isOKLianglv>
+</SysConfig>

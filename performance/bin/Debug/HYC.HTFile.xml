@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HYC.HTFile</name>
+    </assembly>
+    <members>
+        <member name="T:HYC.HTFile.HTCsvHelper">
+            <summary>
+            csv文件帮助类
+            </summary>
+        </member>
+        <member name="M:HYC.HTFile.HTCsvHelper.DataTableToCsv(System.Data.DataTable,System.String,System.Boolean)">
+            <summary>
+            将DataTable导出到csv文件
+            </summary>
+            <param name="dt">数据</param>
+            <param name="strFilePath">文件名</param>
+            <param name="hasHeader">是否生成标题栏</param>
+        </member>
+        <member name="T:HYC.HTFile.HTIniHelper">
+            <summary>
+            Ini文件读写帮助类
+            </summary>
+        </member>
+        <member name="M:HYC.HTFile.HTIniHelper.#ctor(System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="iniFileName">INI文件路径</param>
+        </member>
+        <member name="M:HYC.HTFile.HTIniHelper.Write(System.String,System.String,System.String)">
+            <summary>
+            向INI写入数据
+            </summary>
+            <PARAM name="section">节点名</PARAM>
+            <PARAM name="key">键名</PARAM>
+            <PARAM name="value">值（字符串）</PARAM>
+        </member>
+        <member name="M:HYC.HTFile.HTIniHelper.Read(System.String,System.String,System.String)">
+            <summary>
+            读取INI数据
+            </summary>
+            <PARAM name="section">节点名</PARAM>
+            <PARAM name="key">键名</PARAM>
+            <PARAM name="defaultValue">默认值</PARAM>
+            <returns>值（字符串）</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTIniHelper.GetAllSectionNames">
+            <summary>
+            读取一个ini里面所有的节
+            </summary>
+            <returns>节点数据</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTIniHelper.GetAllKeyValues(System.String)">
+            <summary>
+            得到某个节点下面所有的key和value组合
+            </summary>
+            <param name="section">指定的节名称</param>
+            <returns>数据Item1是Key,Item2是Value</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTIniHelper.DeleteKey(System.String,System.String)">
+            <summary>
+            删除指定项
+            </summary>
+            <param name="section">指定的节名称</param>
+            <param name="key">指定的Key</param>
+        </member>
+        <member name="M:HYC.HTFile.HTIniHelper.DeleteSection(System.String)">
+            <summary>
+            删除指定节下的所有项
+            </summary>
+            <param name="section">指定的节名称</param>
+        </member>
+        <member name="M:HYC.HTFile.EncodingType.GetType(System.String)">
+            <summary> 
+            给定文件的路径，读取文件的二进制数据，判断文件的编码类型 
+            </summary> 
+            <param name="filename">文件路径</param> 
+            <returns>文件的编码类型</returns> 
+        </member>
+        <member name="M:HYC.HTFile.EncodingType.GetType(System.IO.FileStream)">
+            <summary> 
+            通过给定的文件流，判断文件的编码类型 
+            </summary> 
+            <param name="fs">文件流</param> 
+            <returns>文件的编码类型</returns> 
+        </member>
+        <member name="M:HYC.HTFile.EncodingType.IsUTF8Bytes(System.Byte[])">
+            <summary> 
+            判断是否是不带 BOM 的 UTF8 格式 
+            </summary> 
+            <param name="data"></param> 
+            <returns></returns> 
+        </member>
+        <member name="T:HYC.HTFile.HTINI.HTINIHelper">
+            <summary>
+            Ini文件读写帮助类
+            </summary>
+        </member>
+        <member name="M:HYC.HTFile.HTINI.HTINIHelper.#ctor(System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="iniFileName">INI文件路径</param>
+        </member>
+        <member name="M:HYC.HTFile.HTINI.HTINIHelper.Write(System.String,System.String,System.String)">
+            <summary>
+            向INI写入数据
+            </summary>
+            <PARAM name="section">节点名</PARAM>
+            <PARAM name="key">键名</PARAM>
+            <PARAM name="value">值（字符串）</PARAM>
+        </member>
+        <member name="M:HYC.HTFile.HTINI.HTINIHelper.Read(System.String,System.String,System.String)">
+            <summary>
+            读取INI数据
+            </summary>
+            <PARAM name="section">节点名</PARAM>
+            <PARAM name="key">键名</PARAM>
+            <PARAM name="defaultValue">默认值</PARAM>
+            <returns>值（字符串）</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTINI.HTINIHelper.GetAllSectionNames">
+            <summary>
+            读取一个ini里面所有的节
+            </summary>
+            <returns>节点数据</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTINI.HTINIHelper.GetAllKeyValues(System.String)">
+            <summary>
+            得到某个节点下面所有的key和value组合
+            </summary>
+            <param name="section">指定的节名称</param>
+            <returns>数据Item1是Key,Item2是Value</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTINI.HTINIHelper.DeleteKey(System.String,System.String)">
+            <summary>
+            删除指定项
+            </summary>
+            <param name="section">指定的节名称</param>
+            <param name="key">指定的Key</param>
+        </member>
+        <member name="M:HYC.HTFile.HTINI.HTINIHelper.DeleteSection(System.String)">
+            <summary>
+            删除指定节下的所有项
+            </summary>
+            <param name="section">指定的节名称</param>
+        </member>
+        <member name="T:HYC.HTFile.HTXmlHelper">
+            <summary>
+            XML序列化和反序列化帮助类
+            </summary>
+        </member>
+        <member name="M:HYC.HTFile.HTXmlHelper.EntityToXMLFile``1(``0,System.String)">
+            <summary>
+            将对象转化成XML文件
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity">需要序列化的对象</param>
+            <param name="fileName">需要保存的文件名</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXmlHelper.EntityToXMLString``1(``0)">
+            <summary>
+            将对象转化成XML字符串
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity">需要序列化的对象</param>
+            <returns>XML字符串</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXmlHelper.EntityFromXMLFile``1(System.String)">
+            <summary>
+            从xml文件中读取对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="fileName">xml文件名</param>
+            <returns>反序列化的对象</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXmlHelper.EntityFromXMLString``1(System.String)">
+            <summary>
+            从xml字符串中读取对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xmlString">xml字符串</param>
+            <returns>反序列化的对象</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXmlHelper.DataTableToXML(System.Data.DataTable,System.String)">
+            <summary>
+            DataTable写入xml文件中
+            </summary>
+            <param name="source">需要保存的DataTable</param>
+            <param name="fileName">xml文件地址</param>
+            <returns>执行结果</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXmlHelper.DataTableToXMLString(System.Data.DataTable)">
+            <summary>
+            DataTable转成xml字符串
+            </summary>
+            <param name="source">需要序列化的DataTable</param>
+            <returns>xml字符串</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXmlHelper.DataTableFromXMLFile(System.String)">
+            <summary>
+            从xml文件中读取DataTable
+            </summary>
+            <param name="fileName">文件名</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXmlHelper.DataTableFromXMLString(System.String)">
+            <summary>
+            从xml字符串中读取DataTable
+            </summary>
+            <param name="xmlString">xml字符串</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="T:HYC.HTFile.HTXML.HTXMLSerializer">
+            <summary>
+            XML序列化和反序列化帮助类
+            </summary>
+        </member>
+        <member name="M:HYC.HTFile.HTXML.HTXMLSerializer.EntityToXMLFile``1(``0,System.String)">
+            <summary>
+            将对象转化成XML文件
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity">需要序列化的对象</param>
+            <param name="fileName">需要保存的文件名</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXML.HTXMLSerializer.EntityToXMLString``1(``0)">
+            <summary>
+            将对象转化成XML字符串
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity">需要序列化的对象</param>
+            <returns>XML字符串</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXML.HTXMLSerializer.EntityFromXMLFile``1(System.String)">
+            <summary>
+            从xml文件中读取对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="fileName">xml文件名</param>
+            <returns>反序列化的对象</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXML.HTXMLSerializer.EntityFromXMLString``1(System.String)">
+            <summary>
+            从xml字符串中读取对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xmlString">xml字符串</param>
+            <returns>反序列化的对象</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXML.HTXMLSerializer.DataTableToXML(System.Data.DataTable,System.String)">
+            <summary>
+            DataTable写入xml文件中
+            </summary>
+            <param name="source">需要保存的DataTable</param>
+            <param name="fileName">xml文件地址</param>
+            <returns>执行结果</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXML.HTXMLSerializer.DataTableToXMLString(System.Data.DataTable)">
+            <summary>
+            DataTable转成xml字符串
+            </summary>
+            <param name="source">需要序列化的DataTable</param>
+            <returns>xml字符串</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXML.HTXMLSerializer.DataTableFromXMLFile(System.String)">
+            <summary>
+            从xml文件中读取DataTable
+            </summary>
+            <param name="fileName">文件名</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:HYC.HTFile.HTXML.HTXMLSerializer.DataTableFromXMLString(System.String)">
+            <summary>
+            从xml字符串中读取DataTable
+            </summary>
+            <param name="xmlString">xml字符串</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="T:HYC.HTFile.HTZipHelper">
+            <summary>
+            Zip压缩和解压缩帮助类
+            </summary>
+        </member>
+        <member name="M:HYC.HTFile.HTZipHelper.ZipDirectory(System.String,ICSharpCode.SharpZipLib.Zip.ZipOutputStream,System.String)">
+            <summary>   
+            递归压缩文件夹的内部方法   
+            </summary>   
+            <param name="folderToZip">要压缩的文件夹路径</param>   
+            <param name="zipStream">压缩输出流</param>   
+            <param name="parentFolderName">此文件夹的上级文件夹</param>   
+            <returns>压缩结果</returns>   
+        </member>
+        <member name="M:HYC.HTFile.HTZipHelper.ZipDirectory(System.String,System.String,System.String)">
+            <summary>   
+            压缩文件夹    
+            </summary>   
+            <param name="folderToZip">要压缩的文件夹路径</param>   
+            <param name="zipedFile">压缩文件完整路径</param>   
+            <param name="password">密码</param>   
+            <returns>压缩结果</returns>   
+        </member>
+        <member name="M:HYC.HTFile.HTZipHelper.ZipFile(System.String,System.String,System.String)">
+            <summary>   
+            压缩文件   
+            </summary>   
+            <param name="fileToZip">要压缩的文件全名</param>   
+            <param name="zipedFile">压缩后的文件名</param>   
+            <param name="password">密码</param>   
+            <returns>压缩结果</returns>   
+        </member>
+        <member name="M:HYC.HTFile.HTZipHelper.UnZip(System.String,System.String,System.String)">
+            <summary>   
+            解压功能(解压压缩文件到指定目录)   
+            </summary>   
+            <param name="fileToUnZip">待解压的文件</param>   
+            <param name="zipedFolder">指定解压目标目录</param>   
+            <param name="password">密码</param>   
+            <returns>解压结果</returns>   
+        </member>
+    </members>
+</doc>

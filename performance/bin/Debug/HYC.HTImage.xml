@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HYC.HTImage</name>
+    </assembly>
+    <members>
+        <member name="T:HYC.HTImage.BitmapConverter">
+            <summary>
+            图像转换类
+            </summary>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.Gray(System.Drawing.Bitmap)">
+            <summary>
+            灰度化
+            彩色位图转灰度位图，只支持8位索引图和24位真彩
+            </summary>
+            <param name="rgbBitmap">源位图</param>
+            <returns>灰度化的位图</returns>    
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.Gray2Rgb(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            将灰度图片转换为RGB 24bpp图片
+            </summary>
+            <param name="data">单通道bitmap data</param>
+            <param name="height">图像高度</param>
+            <param name="width">图像宽度</param>
+            <returns>位图</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.BitmapToArray(System.Drawing.Bitmap,System.Int32@,System.Int32@)">
+            <summary>
+            根据位图生成数组
+            注：位图为8位灰度索引图
+            </summary>
+            <param name="bitmap">位图</param>
+            <param name="height">图像高度</param>
+            <param name="width">图像宽度</param>
+            <returns>数组</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.ArrayToBitmap(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            根据数组生成位图
+            注：位图为8位灰度索引图
+            </summary>
+            <param name="data">数组</param>
+            <param name="height">图像高度</param>
+            <param name="width">图像宽度</param>
+            <returns>位图</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.ArrayToBitmap(System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            根据数组生成位图
+            注：位图为8位灰度索引图
+            </summary>
+            <param name="data">数组</param>
+            <param name="height">图像高度</param>
+            <param name="width">图像宽度</param>
+            <returns>位图</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.MatrixToBitmap(System.Byte[0:,0:])">
+            <summary>
+            byte矩阵转位图
+            注：位图为8位灰度索引图
+            </summary>
+            <param name="data">矩阵</param>
+            <returns>位图</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.MatrixToBitmap(System.Boolean[0:,0:])">
+            <summary>
+            bool矩阵转位图
+            注：位图为8位灰度索引图
+            </summary>
+            <param name="data">矩阵</param>
+            <returns>位图</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.BitmapToMatrix(System.Drawing.Bitmap)">
+            <summary>
+            位图转byte矩阵
+            注：位图为8位灰度索引图
+            </summary>
+            <param name="bitmap">位图</param>
+            <returns>矩阵</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.MatrixToPseudoBitmap(System.Int32[0:,0:])">
+            <summary>
+            矩阵转位图
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.MatrixToPseudoBitmap(System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            矩阵转位图
+            </summary>
+            <param name="data"></param>
+            <param name="height"></param>
+            <param name="width"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.ArrayToRgbBitmap(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            根据数组生成位图
+            注：位图为24位真彩色图
+            </summary>
+            <param name="data">数组</param>
+            <param name="height">图像高度</param>
+            <param name="width">图像宽度</param>
+            <returns>位图</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.ArrayTo32RgbBitmap(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            根据数组生成位图
+            </summary>
+            <param name="buffer"></param>
+            <param name="height"></param>
+            <param name="width"></param>
+            <param name="color"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.RgbBitmapToArray(System.Drawing.Bitmap,System.Int32@,System.Int32@)">
+            <summary>
+            根据位图生成数组
+            注：位图为24位索引图
+            </summary>
+            <param name="bitmap">位图</param>
+            <param name="height">图像高度</param>
+            <param name="width">图像宽度</param>
+            <returns>数组</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.Bit12ToBit8ForLargeFile(System.Byte[0:,0:])">
+            <summary>
+            //允许源数据比目标区域数据多，但不允许更小，高度必须是4的倍数，用于大图片数据转换
+            </summary>
+            <param name="src"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.Bit12ToBit8(System.UInt16[0:,0:,0:])">
+            <summary>
+            从Image&lt;Gray, UInt16>的16bit数据转换为8bit Bitmap，因为EMGU自带的有gain auto
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.ControlPtToImagePt(System.Drawing.Point,System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            把控件上的点坐标转化为图像上的点坐标
+            图像通过缩放方式，居中在控件上顶齐，把控件上的某一点坐标，转化为居中顶齐的图像坐标
+            </summary>
+            <param name="controlPoint">控件上点坐标</param>
+            <param name="controlSize">控件尺寸</param>
+            <param name="imageSize">图像尺寸</param>
+            <returns>控件上点坐标对应的图像点坐标</returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.GetCoordBox(System.Drawing.PointF,System.Drawing.Size)">
+            <summary>
+            获取在原图中的截取区域（可能超过原图区域）
+            </summary>
+            <param name="centerPointF"></param>
+            <param name="boxSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.GenShowImage(System.Drawing.Image,System.Drawing.Rectangle)">
+            <summary>
+            生成图片的局部图
+            </summary>
+            <param name="image"></param>
+            <param name="srcRect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.ConvertPNG(System.String,System.String,System.Boolean)">
+            <summary>
+            转换图片，图片转换后直接存储
+            </summary>
+            <param name="sourcepath">图片源</param>
+            <param name="dictpath">转换后图片</param>
+            <param name="AddHead">图片是否加包头</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.ConvertPngToBit(System.String)">
+            <summary>
+            转换图片，返回转换后的数据
+            </summary>
+            <param name="filepath">图片路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTImage.BitmapConverter.IsPrime(System.Int32)">
+            <summary>
+            特殊判断
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTImage.ImageBit">
+            <summary>
+            存放转换成数据的png
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageBit.Length">
+            <summary>
+            图片数据长度
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageBit.XPixels">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageBit.YPixels">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageBit.RG">
+            <summary>
+            校验位
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageBit.BG">
+            <summary>
+            校验位
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageBit.RawBuffer">
+            <summary>
+            转换后的数据
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageBit.RgBgChecksum">
+            <summary>
+            校验整数型
+            </summary>
+        </member>
+        <member name="T:HYC.HTImage.ImageParameter">
+            <summary>
+            图片的基本参数
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageParameter.Width">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageParameter.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageParameter.WidthAndHeight">
+            <summary>
+            width * height
+            </summary>
+        </member>
+        <member name="P:HYC.HTImage.ImageParameter.Deepth">
+            <summary>
+            位深度
+            </summary>
+        </member>
+    </members>
+</doc>
